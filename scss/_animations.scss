@@ -1,0 +1,10 @@
+@import 'colores-globales';
+
+@keyframes neonFlicker {
+    0%, 100% {
+        text-shadow: 0 0 10px map-get($colores-globales, color14), 0 0 15px map-get($colores-globales, color6);
+    }
+    50% {
+        text-shadow: 0 0 8px map-get($colores-globales, color6), 0 0 10px map-get($colores-globales, color14);
+    }
+}

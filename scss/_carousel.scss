@@ -1,0 +1,30 @@
+.carousel {
+    width: 60%;
+    margin: 0 auto;
+    
+    .carousel-inner {
+    img {
+        width: 100%; // Mantiene las imágenes ajustadas al carrusel
+        height: 350px; // Tamaño mediano para las imágenes
+        object-fit: cover; // Ajusta las imágenes para que llenen el espacio sin deformarse
+        border-radius: 10px; // Bordes redondeados
+    }
+    }
+
+    @media (max-width: 768px) {
+      width: 80%; // Ajusta el tamaño en pantallas medianas
+
+    .carousel-inner img {
+        height: 300px; // Ajusta la altura en pantallas medianas
+    }
+    }
+
+    @media (max-width: 576px) {
+      width: 90%; // Ajusta el tamaño en pantallas pequeñas
+
+    .carousel-inner img {
+        height: 250px; // Ajusta la altura en pantallas pequeñas
+        border-radius: 5px; // Bordes más pequeños en pantallas pequeñas
+    }
+    }
+}

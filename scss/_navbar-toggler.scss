@@ -1,0 +1,37 @@
+@import 'colores-globales';
+
+.navbar-toggler {
+    border: map-get($colores-globales, color14);
+    background-color: map-get($colores-globales, color14);
+    padding: 12px 16px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0 20px map-get($colores-globales, color14), inset 0 0 10px map-get($colores-globales, color14);
+}
+
+.navbar-toggler:hover {
+    background-color: map-get($colores-globales, color15);
+    transform: scale(1.2);
+    box-shadow: 0 0 30px map-get($colores-globales, color14), inset 0 0 15px map-get($colores-globales, color14);
+}
+
+.navbar-toggler-icon {
+    width: 30px;
+    height: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0,0,0, 0.9)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 768px) {
+    .navbar-toggler {
+        padding: 14px 18px;
+    }
+
+    .navbar-toggler-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .logo-img {
+        max-height: 80px;
+    }
+}

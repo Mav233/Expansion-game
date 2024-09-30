@@ -1,0 +1,63 @@
+@import 'colores-globales';
+
+body {
+    background-image: url('../imagenes-expansion-game/fondo-expansion-punk.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.container,
+.main-content {
+    background: none;
+}
+.accordion {
+    max-width: 80%; /* Ajusta el ancho del acordeón */
+    margin: 0 auto; /* Centrar acordeón */
+    @media (max-width: 768px) {
+      max-width: 100%; /* En pantallas pequeñas, ocupar todo el ancho */
+    }
+.accordion-item {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente oscuro */
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px map-get($colores-globales, color1);
+ /* Sombra neón */
+.accordion-button {
+    background-color: map-get($colores-globales, color2); /* Fondo ciberpunk para los botones */
+    color: map-get($colores-globales, color1); /* Texto en cian */
+    }
+.accordion-body {
+    background-color: map-get($colores-globales, color3); /* Fondo oscuro */
+    color: map-get($colores-globales, color1); /* Color de texto ciberpunk (cyan neón) */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px map-get($colores-globales, color1); /* Sombra alrededor del acordeón */
+        a {
+    color: map-get($colores-globales, color4); /* Color de los enlaces si es necesario */
+    text-decoration: underline;
+        &:hover {
+    color: map-get($colores-globales, color5); /* Cambio a blanco cuando se pasa el cursor */
+    }
+        }
+    @media (max-width: 768px) {
+        font-size: 16px;
+        }
+    }
+    }
+}
+h1 {
+    font-size: 3rem; /* Tamaño predeterminado para pantallas grandes */
+    text-align: center;
+    color: map-get($colores-globales, color1); /* Color cian con sombras */
+    text-shadow: 0 0 10px map-get($colores-globales, color1);
+    @media (max-width: 768px) {
+    font-size: 2rem; /* Tamaño del título para pantallas medianas */
+    }
+    @media (max-width: 480px) {
+    font-size: 1.5rem; /* Tamaño del título para pantallas pequeñas */
+    }
+}
