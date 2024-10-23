@@ -17,7 +17,6 @@ El sitio cuenta con varias funcionalidades y secciones que mejoran la experienci
 - **HTML5**
 - **SASS** (Preprocesador CSS)
 - **Bootstrap** (Framework CSS)
-- **JavaScript**
 - **Git** y **GitHub** (Control de versiones)
 
 ## Estructura de Archivos

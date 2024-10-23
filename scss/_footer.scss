@@ -2,39 +2,92 @@
 
 footer {
     background: linear-gradient(
-    90deg, 
-    map-get($colores-globales, color8), 
-    map-get($colores-globales, color9), 
-    map-get($colores-globales, color10)
-);
+        90deg, 
+        #0f0c29, 
+        #302b63, 
+        #24243e
+    );
     padding: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 3px solid map-get($colores-globales, color14);
+    flex-direction: column; // Cambiar a columna para los dos renglones
+    align-items: center; // Centrar horizontalmente
+    border-top: 3px solid #03e9f4; // Borde superior
 }
 
-footer ul.Contacto {
-    list-style: none;
+.footer-top {
+    display: flex;
+    justify-content: space-between; // Espacio entre CONTACTO, FAQ y redes sociales
+    width: 100%; // Asegurar que ocupe el ancho completo
+}
+
+.Contacto {
+    display: flex; // Alinear horizontalmente
+    list-style: none; // Sin lista
+    padding: 0; // Sin padding
+    margin: 0; // Sin margin
+}
+
+.Contacto li {
+    margin-right: 20px; // Espaciado entre enlaces
 }
 
 footer ul.Contacto li a {
-    color: map-get($colores-globales, color14);
+    color: #03e9f4; // Color azul neón
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 footer ul.Contacto li a:hover {
-    color: map-get($colores-globales, color11);
+    color: #a6f6f1; // Color de hover
 }
 
-footer div a img {
+.footer-socials {
+    display: flex; // Alinear horizontalmente
+}
+
+.footer-socials a img {
     max-width: 40px;
     transition: transform 0.3s ease;
-    filter: drop-shadow(0 0 10px map-get($colores-globales, color14));
+    filter: drop-shadow(0 0 10px #03e9f4); // Sombra para los íconos
+    margin-left: 10px; // Espaciado entre íconos
 }
 
-footer div a img:hover {
-    transform: scale(1.2);
+.footer-socials a img:hover {
+    transform: scale(1.2); // Efecto hover
+}
+
+.footer-developer {
+    display: flex;
+    align-items: center; // Alinear verticalmente
+    margin-top: 10px; // Espaciado entre las secciones
+}
+
+.developer-button {
+    display: flex; // Alinear imagen y texto en línea
+    align-items: center; // Centrar verticalmente
+    background-color: rgba(3, 233, 244, 0.2); // Fondo semi-transparente
+    padding: 10px 20px; // Espaciado interno
+    border-radius: 10px; // Bordes redondeados
+    text-decoration: none; // Sin subrayado
+    transition: background-color 0.3s ease; // Transición suave para el fondo
+}
+
+.developer-button:hover {
+    background-color: rgba(3, 233, 244, 0.4); // Cambiar color de fondo en hover
+}
+
+.mav-logo {
+    max-width: 30px; // Ajusta el tamaño de la imagen
+    margin-right: 10px; // Espaciado a la derecha
+}
+
+.mav-text {
+    color: #03e9f4; // Color del texto
+    font-weight: bold; // Negrita
+    transition: color 0.3s ease; // Transición suave
+}
+
+.mav-text:hover {
+    color: #a6f6f1; // Color de hover para el texto
 }

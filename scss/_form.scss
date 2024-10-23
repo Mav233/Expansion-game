@@ -45,3 +45,17 @@ form input[type="submit"] {
     box-shadow: 0 0 15px map-get($colores-globales, color14);
     width: 100%;
 }
+
+// Estilos del mapa (cambios)
+iframe {
+    width: 100%;
+    max-width: 800px; // Tamaño más grande para desktop
+    height: 500px;
+    border: none;
+    margin: 20px auto;  // Centrado
+    display: block;
+
+    @media (max-width: 768px) {
+        height: 300px; // Altura reducida para pantallas pequeñas
+    }
+}

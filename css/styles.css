@@ -80,18 +80,67 @@ nav {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0,0,0, 0.9)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-@media (max-width: 768px) {
-  .navbar-toggler {
-    padding: 14px 18px;
-  }
-  .navbar-toggler-icon {
-    width: 35px;
-    height: 35px;
-  }
-  .logo-img {
-    max-height: 80px;
+.navbar-title {
+  position: relative;
+  font-size: 1.2rem;
+  color: #03e9f4;
+  background-color: rgba(3, 233, 244, 0.2);
+  text-align: center;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: 2px solid #03e9f4;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(3, 233, 244, 0.5);
+}
+.navbar-title:hover {
+  background-color: rgba(3, 233, 244, 0.3);
+  transform: scale(1.05);
+}
+
+@media (min-width: 769px) {
+  .navbar-title {
+    font-size: 1.1rem;
+    padding: 25px 12.5px;
   }
 }
+@media (max-width: 768px) {
+  .navbar-title {
+    font-size: 1rem;
+    padding: 10px 14px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(3, 233, 244, 0.4);
+    margin-right: 15px;
+  }
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-img {
+  max-height: 80px;
+  margin-right: 15px;
+}
+
+.navbar-toggler {
+  padding: 14px 18px;
+}
+
+.navbar-toggler-icon {
+  width: 35px;
+  height: 35px;
+}
+
+.navbar-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
 main {
   padding: 40px 20px;
   text-align: center;
@@ -150,13 +199,26 @@ footer {
   background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
   padding: 20px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   border-top: 3px solid #03e9f4;
 }
 
-footer ul.Contacto {
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Contacto {
+  display: flex;
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Contacto li {
+  margin-right: 20px;
 }
 
 footer ul.Contacto li a {
@@ -170,14 +232,54 @@ footer ul.Contacto li a:hover {
   color: #a6f6f1;
 }
 
-footer div a img {
+.footer-socials {
+  display: flex;
+}
+
+.footer-socials a img {
   max-width: 40px;
   transition: transform 0.3s ease;
   filter: drop-shadow(0 0 10px #03e9f4);
+  margin-left: 10px;
 }
 
-footer div a img:hover {
+.footer-socials a img:hover {
   transform: scale(1.2);
+}
+
+.footer-developer {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.developer-button {
+  display: flex;
+  align-items: center;
+  background-color: rgba(3, 233, 244, 0.2);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.developer-button:hover {
+  background-color: rgba(3, 233, 244, 0.4);
+}
+
+.mav-logo {
+  max-width: 30px;
+  margin-right: 10px;
+}
+
+.mav-text {
+  color: #03e9f4;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.mav-text:hover {
+  color: #a6f6f1;
 }
 
 form {
@@ -224,6 +326,20 @@ form input[type=submit] {
   text-shadow: 0 0 10px #03e9f4;
   box-shadow: 0 0 15px #03e9f4;
   width: 100%;
+}
+
+iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  border: none;
+  margin: 20px auto;
+  display: block;
+}
+@media (max-width: 768px) {
+  iframe {
+    height: 300px;
+  }
 }
 
 .custom-card {
@@ -383,6 +499,60 @@ h1 {
   .whatsapp-button img {
     width: 25px;
     height: 25px;
+  }
+}
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding: 20px;
+  overflow: hidden;
+}
+.gallery .gallery-item {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(3, 233, 244, 0.5);
+}
+.gallery .gallery-item:hover {
+  transform: scale(1.1);
+  z-index: 2;
+}
+.gallery .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  .gallery {
+    display: none;
+  }
+}
+
+#galleryCarousel {
+  display: none;
+}
+#galleryCarousel .carousel-item {
+  height: 300px;
+}
+#galleryCarousel .carousel-item img {
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  #galleryCarousel {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  #galleryCarousel .carousel-item {
+    height: 250px;
   }
 }
 

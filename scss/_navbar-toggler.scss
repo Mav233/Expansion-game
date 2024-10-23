@@ -1,18 +1,18 @@
 @import 'colores-globales';
 
 .navbar-toggler {
-    border: map-get($colores-globales, color14);
-    background-color: map-get($colores-globales, color14);
+    border: #03e9f4; // Color azul neón
+    background-color: #03e9f4; // Color azul neón
     padding: 12px 16px;
     border-radius: 10px;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 0 20px map-get($colores-globales, color14), inset 0 0 10px map-get($colores-globales, color14);
+    box-shadow: 0 0 20px #03e9f4, inset 0 0 10px #03e9f4;
 }
 
 .navbar-toggler:hover {
-    background-color: map-get($colores-globales, color15);
+    background-color: #00b3d1; // Color al pasar el mouse
     transform: scale(1.2);
-    box-shadow: 0 0 30px map-get($colores-globales, color14), inset 0 0 15px map-get($colores-globales, color14);
+    box-shadow: 0 0 30px #03e9f4, inset 0 0 15px #03e9f4;
 }
 
 .navbar-toggler-icon {
@@ -21,17 +21,66 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0,0,0, 0.9)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+.navbar-title {
+    position: relative;
+    font-size: 1.2rem;
+    color: #03e9f4; // Color azul neón para el texto
+    background-color: rgba(3, 233, 244, 0.2); // Fondo semi-transparente
+    text-align: center;
+    font-weight: bold;
+    padding: 8px 16px; // Más padding para el recuadro
+    border: 2px solid #03e9f4; // Borde azul neón
+    border-radius: 10px; // Bordes redondeados
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease; // Transición suave
+    box-shadow: 0 0 10px rgba(3, 233, 244, 0.5); // Sombra luminosa
+
+    &:hover {
+        background-color: rgba(3, 233, 244, 0.3); // Fondo más intenso al pasar el cursor
+        transform: scale(1.05); // Pequeña expansión en hover
+    }
+}
+
+@media (min-width: 769px) { // Solo aplica en versiones desktop
+    .navbar-title {
+        font-size: 1.1rem; // Ajusta el tamaño de la fuente
+        padding: 25px 12.5px; // Reduce el padding para hacer el recuadro más pequeño
+    }
+}
+
 @media (max-width: 768px) {
+    .navbar-title {
+        font-size: 1rem; // Tamaño de la fuente para pantallas pequeñas
+        padding: 10px 14px; // Ajuste del padding para pantallas pequeñas
+        border-radius: 8px; // Bordes más pequeños en responsive
+        box-shadow: 0 0 8px rgba(3, 233, 244, 0.4); // Sombra ajustada
+        margin-right: 15px; // Margen a la derecha para separar del menú hamburguesa
+    }
+}
+
+    .navbar {
+        display: flex; // Asegura que los elementos estén en una fila
+        align-items: center; // Alinea verticalmente
+        justify-content: space-between; // Espacia los elementos
+    }
+
+    .logo-img {
+        max-height: 80px;
+        margin-right: 15px; // Margen a la derecha para separar del título
+    }
+
     .navbar-toggler {
-        padding: 14px 18px;
+        padding: 14px 18px; // Ajustar padding
     }
 
     .navbar-toggler-icon {
         width: 35px;
         height: 35px;
     }
-
-    .logo-img {
-        max-height: 80px;
+    .navbar-title a {
+        text-decoration: none; // Elimina el subrayado
+        color: inherit; // Hereda el color del texto del contenedor
     }
-}
+    
