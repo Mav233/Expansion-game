@@ -60,20 +60,20 @@ nav {
 
 /* Estilo del dropdown */
 .navbar .dropdown-menu {
-    background-color: #00729f; /* Fondo acorde al estilo */
+    background-color: #00729f;
     border: none;
     box-shadow: 0 0 20px #03e9f4, inset 0 0 10px #03e9f4;
-    padding: 10px; /* Espaciado interno para resaltar la caja */
-    border-radius: 8px; /* Bordes redondeados */
-    margin-top: 10px; /* Separar un poco del resto del menú */
-    position: absolute; /* Asegurar que el menú se despliegue sobre otros elementos */
-    z-index: 999; /* Asegurar que quede por encima del resto */
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    position: absolute;
+    z-index: 999;
 }
 
 .navbar .dropdown-item {
     color: #03e9f4;
     transition: all 0.3s ease;
-    padding: 10px 20px; /* Espacio interno para las opciones del dropdown */
+    padding: 10px 20px;
 }
 
 .navbar .dropdown-item:hover {
@@ -84,12 +84,12 @@ nav {
 /* Estilo del navbar-toggler */
 .navbar-toggler {
     border:#03e9f4;
-    background-color: #03e9f4; /* Color más brillante */
+    background-color: #03e9f4;
     padding: 12px 16px;
     border-radius: 10px;
     position: relative;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 0 20px #03e9f4, inset 0 0 10px #03e9f4; /* Efecto neon más intenso */
+    box-shadow: 0 0 20px #03e9f4, inset 0 0 10px #03e9f4; 
 }
 
 .navbar-toggler-icon {
@@ -99,24 +99,24 @@ nav {
 }
 
 .navbar-toggler:hover {
-    background-color: #00b3d1; /* Un tono más oscuro al pasar el cursor */
-    transform: scale(1.2); /* Agranda un poco el botón al pasar el cursor */
-    box-shadow: 0 0 30px #03e9f4, inset 0 0 15px #03e9f4; /* Efecto neon más fuerte al hacer hover */
+    background-color: #00b3d1;
+    transform: scale(1.2);
+    box-shadow: 0 0 30px #03e9f4, inset 0 0 15px #03e9f4;
 }
 
 /* Ajustes para pantallas más pequeñas */
 @media (max-width: 768px) {
     .navbar-toggler {
-        padding: 14px 18px; /* Aumenta el tamaño del toggler */
+        padding: 14px 18px;
     }
 
     .navbar-toggler-icon {
-        width: 35px; /* Aumenta el tamaño del ícono */
+        width: 35px;
         height: 35px;
     }
 
     .logo-img {
-        max-height: 80px; /* Aumenta el tamaño del logo */
+        max-height: 80px;
     }
 }
 
@@ -131,16 +131,16 @@ main {
 
 /* Fondo del texto más sutil */
 main h1, main h2, main p {
-    background: rgba(30, 30, 30, 0.75); /* Fondo oscuro pero más suave */
+    background: rgba(30, 30, 30, 0.75);
     padding: 15px;
     border-radius: 10px;
     display: inline-block;
-    text-shadow: 0 0 10px #8a2be2, 0 0 15px #03e9f4; /* Sombra más suave */
-    box-shadow: 0 0 15px rgba(3, 233, 244, 0.5), 0 0 20px rgba(138, 43, 226, 0.5); /* Resplandor más suave */
+    text-shadow: 0 0 10px #8a2be2, 0 0 15px #03e9f4;
+    box-shadow: 0 0 15px rgba(3, 233, 244, 0.5), 0 0 20px rgba(138, 43, 226, 0.5); 
     margin: 10px 0;
-    color: #ffffff; /* Blanco puro para mejor contraste */
+    color: #ffffff;
     font-weight: bold;
-    font-size: 1.2em; /* Tamaño moderado */
+    font-size: 1.2em;
     z-index: 2;
     position: relative;
 }
@@ -153,7 +153,7 @@ main h1::before, main h2::before, main p::before {
     left: 50%;
     width: 120%;
     height: 120%;
-    background: radial-gradient(circle, rgba(138, 43, 226, 0.2), transparent); /* Mezcla violeta y azul */
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.2), transparent);
     transform: translate(-50%, -50%);
     z-index: -1;
     filter: blur(10px);
@@ -163,25 +163,24 @@ main h1::before, main h2::before, main p::before {
 /* Ajustes en los encabezados */
 main h1, main h2 {
     color: #03e9f4;
-    font-size: 2.5em; /* Tamaño más reducido que el anterior */
-    letter-spacing: 1.5px; /* Espaciado moderado */
+    font-size: 2.5em; 
+    letter-spacing: 1.5px;
 }
 
 main p, main h4 {
     line-height: 1.6;
     color: #a6f6f1;
-    font-size: 1.1em; /* Tamaño moderado */
+    font-size: 1.1em;
 }
 
 /* Estilo para el iframe */
 iframe {
     margin-top: 20px;
-    border: 3px solid #8a2be2; /* Borde en violeta */
+    border: 3px solid #8a2be2; 
     border-radius: 10px;
     box-shadow: 0 0 20px #8a2be2;
 }
 
-/* Animación de parpadeo más sutil */
 @keyframes neonFlicker {
     0%, 100% {
         text-shadow: 0 0 10px #03e9f4, 0 0 15px #8a2be2;
@@ -192,7 +191,7 @@ iframe {
 }
 
 main h1, main h2, main p {
-    animation: neonFlicker 2.5s infinite alternate; /* Animación más lenta y suave */
+    animation: neonFlicker 2.5s infinite alternate;
 }
 
 footer {
@@ -288,24 +287,24 @@ section p {
 
 /* FORMULARIO DE CONTACTO */
 form {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con transparencia */
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     padding: 20px;
     margin-top: 20px;
-    box-shadow: 0 0 15px #03e9f4; /* Sombra en tono neón */
+    box-shadow: 0 0 15px #03e9f4;
     width: 80%;
     max-width: 600px;
     text-align: left;
-    border: 2px solid #03e9f4; /* Borde neón para darle más contraste */
+    border: 2px solid #03e9f4; 
     transition: all 0.3s ease;
 }
 
 form:hover {
-    box-shadow: 0 0 25px #03e9f4, 0 0 35px #03e9f4; /* Efecto de resplandor al hacer hover */
+    box-shadow: 0 0 25px #03e9f4, 0 0 35px #03e9f4;
 }
 
 form h2 {
-    color: #03e9f4; /* Manteniendo el tono neón en los títulos */
+    color: #03e9f4; 
     text-align: center;
     margin-bottom: 20px;
     text-shadow: 0 0 10px #03e9f4;
@@ -313,7 +312,7 @@ form h2 {
 
 form label {
     display: block;
-    color: #a6f6f1; /* Azul claro para un mejor contraste */
+    color: #a6f6f1;
     margin-bottom: 5px;
 }
 
@@ -322,9 +321,9 @@ form input[type="email"],
 form input[type="number"],
 form select,
 form textarea {
-    width: 100%; /* Aumentando la responsividad */
+    width: 100%;
     padding: 10px;
-    background: #0b3d91; /* Azul oscuro acorde al título */
+    background: #0b3d91; 
     border: 2px solid #03e9f4;
     border-radius: 5px;
     color: #e4e4e4;
@@ -437,20 +436,20 @@ ol {
 }
 
 .custom-card {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro translúcido */
-    color: #03e9f4; /* Color principal del texto */
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: #03e9f4; 
     border: none;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    height: 100%; /* Ajuste para que todas las cards sean de igual altura */
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .custom-card:hover {
-    transform: translateY(-10px); /* Efecto de elevación al pasar el mouse */
-    box-shadow: 0 8px 16px rgba(3, 233, 244, 0.6); /* Sombra más intensa */
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(3, 233, 244, 0.6);
 }
 
 .custom-card .card-img-top {
@@ -462,7 +461,7 @@ ol {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-grow: 1; /* Permite que el contenido de la card se ajuste */
+    flex-grow: 1;
 }
 
 .custom-card .card-title {
@@ -507,39 +506,39 @@ ol {
 
 /* Estilo del título de la página */
 .page-title {
-    font-size: 3.5rem; /* Tamaño de fuente predeterminado */
+    font-size: 3.5rem; 
     font-family: 'Orbitron', sans-serif;
     text-transform: uppercase;
-    color: #00f0ff; /* Color principal azul brillante */
+    color: #00f0ff;
     letter-spacing: 5px;
-    text-shadow: 0 0 10px #03e9f4, 0 0 20px #03e9f4, 0 0 30px #00729f, 0 0 40px #00729f; /* Sombras en azul brillante y oscuro */
+    text-shadow: 0 0 10px #03e9f4, 0 0 20px #03e9f4, 0 0 30px #00729f, 0 0 40px #00729f; 
     text-align: center;
-    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro translúcido */
+    background: rgba(0, 0, 0, 0.7);
     padding: 10px 20px;
     border-radius: 8px;
     margin-bottom: 20px;
     display: inline-block;
-    max-width: 100%; /* Evita que el fondo ocupe todo el ancho */
-    animation: fadeIn 2.5s ease-in-out forwards; /* Animación suave */
+    max-width: 100%; 
+    animation: fadeIn 2.5s ease-in-out forwards;
 }
 
 /* Ajustes para dispositivos más pequeños */
 @media (max-width: 768px) {
     .page-title {
-        font-size: 2.5rem; /* Reduce el tamaño de la fuente en pantallas pequeñas */
-        padding: 8px 15px; /* Ajusta el padding para que se ajuste mejor en pantallas más pequeñas */
-        letter-spacing: 3px; /* Reduce el espaciado entre letras */
-        text-shadow: 0 0 8px #03e9f4, 0 0 16px #03e9f4, 0 0 24px #00729f, 0 0 32px #00729f; /* Ajusta las sombras para mantener la visibilidad */
+        font-size: 2.5rem; 
+        padding: 8px 15px; 
+        letter-spacing: 3px; 
+        text-shadow: 0 0 8px #03e9f4, 0 0 16px #03e9f4, 0 0 24px #00729f, 0 0 32px #00729f; 
     }
 }
 
 /* Ajustes adicionales para dispositivos muy pequeños */
 @media (max-width: 480px) {
     .page-title {
-        font-size: 1.8rem; /* Reduce aún más el tamaño de la fuente */
-        padding: 6px 10px; /* Ajusta el padding para pantallas muy pequeñas */
-        letter-spacing: 2px; /* Reduce el espaciado entre letras */
-        text-shadow: 0 0 6px #03e9f4, 0 0 12px #03e9f4, 0 0 18px #00729f, 0 0 24px #00729f; /* Ajusta las sombras para mantener la visibilidad */
+        font-size: 1.8rem; 
+        padding: 6px 10px; 
+        letter-spacing: 2px; 
+        text-shadow: 0 0 6px #03e9f4, 0 0 12px #03e9f4, 0 0 18px #00729f, 0 0 24px #00729f;
     }
 }
 
@@ -547,23 +546,23 @@ ol {
 /* Estilo para la descripción bajo el título */
 .page-description {
     font-size: 1.2rem;
-    color: #03e9f4; /* Color del texto principal */
+    color: #03e9f4;
     text-align: center;
     padding: 10px;
     max-width: 1200px;
     width: 100%;
     border-radius: 8px;
-    background: rgba(3, 233, 244, 0.1); /* Fondo translúcido */
-    box-shadow: 0px 0px 15px 5px rgba(3, 233, 244, 0.6); /* Sombra brillante */
-    transition: all 0.5s ease; /* Transición suave */
+    background: rgba(3, 233, 244, 0.1);
+    box-shadow: 0px 0px 15px 5px rgba(3, 233, 244, 0.6);
+    transition: all 0.5s ease;
     margin-bottom: 30px;
-    animation: fadeInUp 2.5s ease-in-out forwards; /* Animación suave */
+    animation: fadeInUp 2.5s ease-in-out forwards;
 }
 
 /* Efecto de hover para la descripción */
 .page-description:hover {
-    background: rgba(3, 233, 244, 0.2); /* Fondo ligeramente más brillante */
-    box-shadow: 0px 0px 20px 10px rgba(3, 233, 244, 0.8); /* Sombra más intensa */
+    background: rgba(3, 233, 244, 0.2);
+    box-shadow: 0px 0px 20px 10px rgba(3, 233, 244, 0.8);
 }
 
 /* Ajustes de responsividad para pantallas más pequeñas */
@@ -618,7 +617,7 @@ ol {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 300px; /* Ancho de las cards */
+    width: 300px;
     text-align: center;
     margin: 20px;
 }
@@ -688,38 +687,38 @@ ol {
 }
 
 .carousel {
-    max-width: 60%; /* Reduce el tamaño del carrusel */
-    margin: 0 auto; /* Centra el carrusel */
+    max-width: 60%; 
+    margin: 0 auto; 
 }
 
 .carousel-inner img {
-    width: 100%; /* Mantiene las imágenes ajustadas al carrusel */
-    height: 400px; /* Fija la altura de las imágenes para que no sean demasiado grandes */
-    object-fit: cover; /* Ajusta las imágenes para que llenen el espacio sin deformarse */
-    border-radius: 10px; /* Bordes redondeados */
+    width: 100%; 
+    height: 400px; 
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 @media (max-width: 768px) {
     .carousel {
-        max-width: 70%; /* Ajusta el tamaño en pantallas medianas */
+        max-width: 70%;
     }
     .carousel-inner img {
-        height: 300px; /* Ajusta la altura en pantallas medianas */
+        height: 300px;
     }
 }
 
 @media (max-width: 576px) {
     .carousel {
-        max-width: 80%; /* Ajusta el tamaño en pantallas pequeñas */
+        max-width: 80%;
     }
     .carousel-inner img {
-        height: 200px; /* Ajusta la altura en pantallas pequeñas */
-        border-radius: 5px; /* Bordes más pequeños en pantallas pequeñas */
+        height: 200px;
+        border-radius: 5px;
     }
 }
 
 body {
-    background-image: url('../Imagenes/002.jpg'); /* Cambia esta ruta a la de tu imagen */
+    background-image: url('../Imagenes/002.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -735,63 +734,63 @@ body {
 }
 
 .accordion {
-    max-width: 80%; /* Ajusta el ancho del acordeón */
-    margin: 0 auto; /* Centrar acordeón */
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
     .accordion {
-        max-width: 100%; /* En pantallas pequeñas, ocupar todo el ancho */
+        max-width: 100%;
     }
 }
 
 .accordion-item {
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente oscuro */
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
-    box-shadow: 0px 0px 15px #03e9f4; /* Sombra neón */
+    box-shadow: 0px 0px 15px #03e9f4;
 }
 
 .accordion-button {
-    background-color: #00729f; /* Fondo ciberpunk para los botones */
-    color: #03e9f4; /* Texto en cian */
+    background-color: #00729f;
+    color: #03e9f4; 
 }
 
 h1 {
-    font-size: 3rem; /* Tamaño predeterminado para pantallas grandes */
+    font-size: 3rem;
     text-align: center;
-    color: #03e9f4; /* Color cian con sombras */
+    color: #03e9f4;
     text-shadow: 0 0 10px #03e9f4;
 }
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 2rem; /* Tamaño del título para pantallas medianas */
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.5rem; /* Tamaño del título para pantallas pequeñas */
+        font-size: 1.5rem;
     }
 }
 
 /* Estilo del acordeón - Respuestas desplegadas */
 .accordion-body {
-    background-color: #121212; /* Fondo oscuro */
-    color: #03e9f4; /* Color de texto ciberpunk (cyan neón) */
+    background-color: #121212;
+    color: #03e9f4;
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 0 0 10px #03e9f4; /* Sombra alrededor del acordeón */
+    box-shadow: 0 0 10px #03e9f4;
 }
 
 .accordion-body a {
-    color: #00ffff; /* Color de los enlaces si es necesario */
+    color: #00ffff; 
     text-decoration: underline;
 }
 
   /* Efecto hover para los enlaces dentro del acordeón */
 .accordion-body a:hover {
-    color: #ffffff; /* Cambio a blanco cuando se pasa el cursor */
+    color: #ffffff; 
 }
 
   /* Para que el texto dentro del acordeón sea responsive */

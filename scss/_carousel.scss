@@ -1,30 +1,247 @@
+@import 'colores-globales';
+
 .carousel {
     width: 60%;
     margin: 0 auto;
-    
-    .carousel-inner {
-    img {
-        width: 100%; // Mantiene las imágenes ajustadas al carrusel
-        height: 350px; // Tamaño mediano para las imágenes
-        object-fit: cover; // Ajusta las imágenes para que llenen el espacio sin deformarse
-        border-radius: 10px; // Bordes redondeados
-    }
+    display: block;
+    position: relative;
+    margin-bottom: 70px;
+
+.carousel-inner {
+        img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
     }
 
     @media (max-width: 768px) {
-      width: 80%; // Ajusta el tamaño en pantallas medianas
+        width: 80%;
 
-    .carousel-inner img {
-        height: 300px; // Ajusta la altura en pantallas medianas
-    }
+        .carousel-inner img {
+            height: 300px;
+        }
     }
 
     @media (max-width: 576px) {
-      width: 90%; // Ajusta el tamaño en pantallas pequeñas
+        width: 90%;
 
-    .carousel-inner img {
-        height: 250px; // Ajusta la altura en pantallas pequeñas
-        border-radius: 5px; // Bordes más pequeños en pantallas pequeñas
+.carousel-inner img {
+            height: 250px;
+            border-radius: 5px;
+        }
     }
+}
+
+
+//CAROUSEL FOOTER
+.cyber-slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 150px;
+  background: map-get($colores-globales, color20);
+  border: 2px solid map-get($colores-globales, color21);
+  border-radius: 15px;
+  box-shadow: 0 0 20px map-get($colores-globales, color21);
+
+  .cyber-slider-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: auto;
+    height: 100%;
+  }
+
+  .cyber-slide {
+    width: 120px;
+    margin: 0 20px;
+    flex-shrink: 0; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 10px;
+      box-shadow: 0 0 15px map-get($colores-globales, color22);
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px map-get($colores-globales, color23);
+    }
+  }
+
+@media (max-width: 768px) {
+  height: 120px;
+  .cyber-slider-track {
+    display: flex;
+    animation: scroll 8s linear infinite;
+  }
+
+  .cyber-slide {
+    min-width: 120px;
+    margin: 0 8px;
+  }
+}
+
+// Animación para responsive
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+  @media (min-width: 769px) {
+    .cyber-slider-track {
+      animation: none !important;
+    }
+
+    .cyber-slide {
+      flex-shrink: 0;
+      margin: 0 20px;
+    }
+  }
+}
+
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 20px;
+    overflow: hidden;
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px map-get($colores-globales, color24);
+
+    &:hover {
+        transform: scale(1.1);
+        z-index: 2;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+@media (max-width: 768px) {
+      display: none; 
+}
+}
+
+#galleryCarousel {
+  display: none; 
+
+.carousel-item {
+      height: 300px; 
+    img {
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 768px) {
+      display: block; 
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+          height: 250px; 
+    }
+}
+}
+
+
+.productos-relacionados {
+    // Estilos generales para desktop
+    h2 {
+        text-align: center;
+        color: map-get($colores-globales, color25); 
+        margin-bottom: 20px;
+        font-size: 2rem; 
+    }
+
+    .d-flex {
+        display: flex;
+        justify-content: space-around; 
+        align-items: flex-start; 
+        flex-wrap: nowrap; 
+    }
+
+    .carousel-container {
+        margin: 20px; 
+        flex: 1; 
+        max-width: 45%; 
+        height: 1000px; // Modificación de los carousel pares 
+        overflow: hidden; 
+    }
+
+    .carousel-inner {
+        height: 100%; 
+        img {
+            object-fit: cover; 
+            height: 100%; 
+            width: 100%; 
+        }
+    }
+
+    // Controles de navegación
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: map-get($colores-globales, color22);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+
+    // Indicadores de progreso
+    .carousel-indicators {
+        button {
+            background-color: map-get($colores-globales, color6);
+        }
+
+        .active {
+            background-color: map-get($colores-globales, color25);
+        }
+    }
+
+    // Estilos para responsive
+    @media (max-width: 768px) {
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        .d-flex {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .carousel-container {
+            max-width: 100%;
+            margin: 10px 0;
+            height: auto;
+        }
+
+        .carousel-item {
+            height: 200px;
+        }
     }
 }

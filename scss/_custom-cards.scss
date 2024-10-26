@@ -1,7 +1,7 @@
 @import 'colores-globales';
 
 .custom-card {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: map-get($colores-globales, color19);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 15px map-get($colores-globales, color14);
@@ -14,4 +14,55 @@
 .custom-card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 25px map-get($colores-globales, color14);
+}
+
+.custom-card {
+    background-color: map-get($colores-globales, color19);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px map-get($colores-globales, color14);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: map-get($colores-globales, color7);
+    position: relative;
+    overflow: hidden;
+    
+    .card-body {
+        padding-bottom: 30px;
+    }
+
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        background-color: transparent;
+        border-top: 1px solid map-get($colores-globales, color26);
+    }
+
+    .price {
+        font-size: 1.2rem;
+        color: map-get($colores-globales, color25);
+        font-weight: bold;
+    }
+
+    .buy-button {
+        background-color: map-get($colores-globales, color25);
+        color: map-get($colores-globales, color27);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        
+        &:hover {
+            background-color: map-get($colores-globales, color6);
+            transform: scale(1.05);
+            box-shadow: 0 0 10px map-get($colores-globales, color25);
+        }
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px map-get($colores-globales, color14);
+    }
 }

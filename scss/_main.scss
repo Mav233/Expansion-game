@@ -10,11 +10,11 @@ main {
 }
 
 main h1, main h2, main p {
-    background: rgba(30, 30, 30, 0.75);
+    background: map-get($colores-globales, color35);
     padding: 15px;
     border-radius: 10px;
     text-shadow: 0 0 10px map-get($colores-globales, color6), 0 0 15px map-get($colores-globales, color14);
-    box-shadow: 0 0 15px rgba(3, 233, 244, 0.5), 0 0 20px rgba(138, 43, 226, 0.5);
+    box-shadow: 0 0 15px map-get($colores-globales, color24), 0 0 20px map-get($colores-globales, color36);
     margin: 10px 0;
     color: map-get($colores-globales, color5);
     font-weight: bold;

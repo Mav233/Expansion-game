@@ -1,7 +1,7 @@
 @import 'colores-globales';
 
 form {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: map-get($colores-globales, color34);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 15px map-get($colores-globales, color14);
@@ -9,7 +9,7 @@ form {
     max-width: 600px;
     text-align: center;
     border: 2px solid map-get($colores-globales, color14);
-    margin: 0 auto;  // Para centrar el formulario
+    margin: 0 auto;
     transition: all 0.3s ease;
 }
 
@@ -30,7 +30,7 @@ form textarea {
     color: map-get($colores-globales, color7);
     box-shadow: inset 0 0 5px map-get($colores-globales, color14);
     transition: all 0.3s ease;
-    text-align: center; // Asegura de que los inputs también estén centrados
+    text-align: center;
 }
 
 form input[type="submit"] {
@@ -46,16 +46,15 @@ form input[type="submit"] {
     width: 100%;
 }
 
-// Estilos del mapa (cambios)
 iframe {
     width: 100%;
-    max-width: 800px; // Tamaño más grande para desktop
+    max-width: 800px;
     height: 500px;
     border: none;
-    margin: 20px auto;  // Centrado
+    margin: 20px auto;
     display: block;
 
     @media (max-width: 768px) {
-        height: 300px; // Altura reducida para pantallas pequeñas
+        height: 300px;
     }
 }

@@ -19,7 +19,7 @@
 </head>
 <body>
 
-    <header>
+    <header id="navbar">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
             <a class="navbar-brand" href="../index.html">
@@ -75,7 +75,7 @@
             </p>
         </div>
     </div>
-    
+
     <div class="container my-5">
         <div class="row">
             <!-- Artículo 1 -->
@@ -85,6 +85,10 @@
                     <div class="card-body">
                         <h5 class="card-title">Procesador AMD Ryzen 9 5900X</h5>
                         <p class="card-text">Desata el poder del AMD Ryzen 9 5900X, un procesador de 12 núcleos diseñado para maximizar el rendimiento en juegos y tareas de alto rendimiento como edición de video y modelado 3D. Perfecto para los entusiastas del PC que buscan lo mejor.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">$408.589,99</span>
+                        <button class="buy-button">Comprar</button>
                     </div>
                 </div>
             </div>
@@ -96,6 +100,10 @@
                         <h5 class="card-title">Procesador AMD Ryzen 7 5800X</h5>
                         <p class="card-text">El AMD Ryzen 7 5800X te ofrece 8 núcleos de potencia para llevar tu experiencia de gaming y multitarea al siguiente nivel. Ideal para quienes buscan un rendimiento superior en todas sus aplicaciones.</p>
                     </div>
+                    <div class="card-footer">
+                        <span class="price">$468.166,99</span>
+                        <button class="buy-button">Comprar</button>
+                    </div>
                 </div>
             </div>
             <!-- Artículo 3 -->
@@ -105,6 +113,10 @@
                     <div class="card-body">
                         <h5 class="card-title">Procesador AMD Ryzen 5 5600X</h5>
                         <p class="card-text">El equilibrio perfecto entre rendimiento y eficiencia con el AMD Ryzen 5 5600X. Un procesador de 6 núcleos que es ideal para jugadores y creadores de contenido que buscan velocidad sin comprometer el presupuesto.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">$308.689,99</span>
+                        <button class="buy-button">Comprar</button>
                     </div>
                 </div>
             </div>
@@ -116,6 +128,10 @@
                         <h5 class="card-title">Procesador Intel Core i9-11900K</h5>
                         <p class="card-text">Lleva tu rendimiento al extremo con el Intel Core i9-11900K. Con 8 núcleos y 16 hilos, este procesador está diseñado para ofrecer la máxima velocidad en tareas intensivas como gaming competitivo y edición multimedia de alta calidad.</p>
                     </div>
+                    <div class="card-footer">
+                        <span class="price">$798.890,99</span>
+                        <button class="buy-button">Comprar</button>
+                    </div>
                 </div>
             </div>
             <!-- Artículo 5 -->
@@ -125,6 +141,10 @@
                     <div class="card-body">
                         <h5 class="card-title">Procesador Intel Core i7-11700K</h5>
                         <p class="card-text">El procesador Intel Core i7-11700K ofrece un rendimiento sólido con 8 núcleos, ideal para gamers y profesionales que requieren velocidad y estabilidad para manejar múltiples tareas a la vez con facilidad.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">$469.899,99</span>
+                        <button class="buy-button">Comprar</button>
                     </div>
                 </div>
             </div>
@@ -136,8 +156,140 @@
                         <h5 class="card-title">Procesador Intel Core i5-11600K</h5>
                         <p class="card-text">Equilibra rendimiento y costo con el Intel Core i5-11600K, un procesador de 6 núcleos que ofrece un rendimiento confiable tanto para juegos como para trabajos de oficina y tareas creativas.</p>
                     </div>
+                    <div class="card-footer">
+                        <span class="price">$463.456,99</span>
+                        <button class="buy-button">Comprar</button>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+<!-- Productos relacionados -->
+<section class="productos-relacionados">
+    <div class="d-flex justify-content-between">
+        <div class="carousel-container">
+            <h2>Productos relacionados</h2>
+            <div id="productosCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../imagenes-expansion-game/img-carousel/grafica-gigabyte-rtx-sl500.jpg" class="d-block w-100" alt="grafica gigabyte rtx sl500">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../imagenes-expansion-game/img-carousel/placa-de-video-Gigabyte.jpg" class="d-block w-100" alt="placa de video Gigabyte.jpg">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../imagenes-expansion-game/img-carousel/tarjeta-grafica-amd-radeon.jpg" class="d-block w-100" alt="tarjeta grafica amd radeon">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../imagenes-expansion-game/img-carousel/tarjeta-grafica-rtx.jpg" class="d-block w-100" alt="tarjeta grafica rtx">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../imagenes-expansion-game/img-carousel/tuf-gaming-geforce.jpg" class="d-block w-100" alt="tuf gaming geforce">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                </div>
+                <!-- Controles de navegación manual -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#productosCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productosCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+                <!-- Indicadores de progreso -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#productosCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#productosCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#productosCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#productosCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#productosCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+            </div>
+        </div>
+<!-- Complentá tu compra -->
+        <div class="carousel-container">
+            <h2>Complementá tu compra</h2>
+            <div id="complementoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../imagenes-expansion-game/img-carousel/pc-gamer-exo-i5-gen.jpg" class="d-block w-100" alt="pc gamer exo i5 gen">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../imagenes-expansion-game/img-carousel/pc-gamer-gfast-x.jpg" class="d-block w-100" alt="pc gamer gfast x">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../imagenes-expansion-game/img-carousel/pc-gamer-mega-intel7.jpg" class="d-block w-100" alt="pc gamer mega intel7">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../imagenes-expansion-game/img-carousel/pc-gamer-ryzen5-8500g.jpg" class="d-block w-100" alt="pc gamer ryzen5 8500g">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../imagenes-expansion-game/img-carousel/pc-gaming-xtreme.jpg" class="d-block w-100" alt="pc gaming xtreme">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                </div>
+                <!-- Controles de navegación manual -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#complementoCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#complementoCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+                <!-- Indicadores de progreso -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#complementoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#complementoCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#complementoCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#complementoCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#complementoCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Logos de marcas tecnólogicas -->
+    <div class="cyber-slider-container">
+        <div class="cyber-slider-track">
+        <div class="cyber-slide">
+            <img src="../imagenes-expansion-game/logos-marcas-tecno/log-amd-ryzen.jpg" alt="Logo AMD Ryzen">
+        </div>
+        <div class="cyber-slide">
+            <img src="../imagenes-expansion-game/logos-marcas-tecno/log-asrock.jpg" alt="Logo Asrock">
+        </div>
+        <div class="cyber-slide">
+            <img src="../imagenes-expansion-game/logos-marcas-tecno/log-asus.jpg" alt="Logo Asus">
+        </div>
+        <div class="cyber-slide">
+            <img src="../imagenes-expansion-game/logos-marcas-tecno/log-msi.jpg" alt="Logo MSI">
+        </div>
+        <div class="cyber-slide">
+            <img src="../imagenes-expansion-game/logos-marcas-tecno/log-thermaltake.jpg" alt="Logo Thermaltake">
+        </div>
         </div>
     </div>
 
@@ -147,7 +299,7 @@
 </a>
 
 </main>
-<footer>
+<footer id="footer">
     <div class="footer-top">
         <ul class="Contacto">
             <li><a href="../pages/contacto.html">CONTACTO</a></li>  
@@ -165,6 +317,18 @@
             </a>
         </div>
     </div>
+<!--Newsletter Gamer-->
+    <div class="newsletter-container">
+        <h2>Suscríbete a nuestro Newsletter Gamer</h2>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Ingresa tu correo electrónico" required>
+            <div class="checkbox-container">
+                <input type="checkbox" id="offers-agreement" required>
+                <label for="offers-agreement">Estoy de acuerdo en recibir información sobre nuevos ingresos y ofertas.</label>
+            </div>
+            <button type="submit">¡Enviar y Suscribirse!</button>
+        </form>
+    </div>
 
     <div class="footer-developer">
         <a href="https://github.com/Mav233" class="developer-button">
@@ -175,6 +339,33 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!-- Flecha que lleva al footer o al inicio -->
+<a href="#footer" id="scroll-arrow" class="scroll-arrow">
+    <img src="../imagenes-expansion-game/flecha-doble-sentido.png" alt="Scroll Arrow">
+</a>
+
+<script>
+    const scrollArrow = document.getElementById('scroll-arrow');
+    let isAtFooter = false;
+
+    const footer = document.getElementById('footer');
+    const navbar = document.getElementById('navbar');
+
+    scrollArrow.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    if (!isAtFooter) {
+        footer.scrollIntoView({ behavior: 'smooth' });
+        isAtFooter = true;
+        scrollArrow.style.transform = 'rotate(360deg)';
+    } else {
+        navbar.scrollIntoView({ behavior: 'smooth' });
+        isAtFooter = false;
+        scrollArrow.style.transform = 'rotate(360deg)';
+    }
+    });
+</script>
 
 </body>
 </html>

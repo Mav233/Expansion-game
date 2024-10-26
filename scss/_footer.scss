@@ -3,91 +3,184 @@
 footer {
     background: linear-gradient(
         90deg, 
-        #0f0c29, 
-        #302b63, 
-        #24243e
+        map-get($colores-globales, color8), 
+        map-get($colores-globales, color9), 
+        map-get($colores-globales, color10)
     );
     padding: 20px;
     display: flex;
-    flex-direction: column; // Cambiar a columna para los dos renglones
-    align-items: center; // Centrar horizontalmente
-    border-top: 3px solid #03e9f4; // Borde superior
+    flex-direction: column;
+    align-items: center;
+    border-top: 3px solid map-get($colores-globales, color25);
 }
 
 .footer-top {
     display: flex;
-    justify-content: space-between; // Espacio entre CONTACTO, FAQ y redes sociales
-    width: 100%; // Asegurar que ocupe el ancho completo
+    justify-content: space-between;
+    width: 100%;
 }
 
 .Contacto {
-    display: flex; // Alinear horizontalmente
-    list-style: none; // Sin lista
-    padding: 0; // Sin padding
-    margin: 0; // Sin margin
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .Contacto li {
-    margin-right: 20px; // Espaciado entre enlaces
+    margin-right: 20px;
 }
 
 footer ul.Contacto li a {
-    color: #03e9f4; // Color azul neón
+    color: map-get($colores-globales, color25);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 footer ul.Contacto li a:hover {
-    color: #a6f6f1; // Color de hover
+    color: map-get($colores-globales, color11);
 }
 
 .footer-socials {
-    display: flex; // Alinear horizontalmente
+    display: flex;
 }
 
 .footer-socials a img {
     max-width: 40px;
     transition: transform 0.3s ease;
-    filter: drop-shadow(0 0 10px #03e9f4); // Sombra para los íconos
-    margin-left: 10px; // Espaciado entre íconos
+    filter: drop-shadow(0 0 10px map-get($colores-globales, color25));
+    margin-left: 10px;
 }
 
 .footer-socials a img:hover {
-    transform: scale(1.2); // Efecto hover
+    transform: scale(1.2);
 }
 
+
+//Desarrolado por MAV
 .footer-developer {
     display: flex;
-    align-items: center; // Alinear verticalmente
-    margin-top: 10px; // Espaciado entre las secciones
+    align-items: center;
+    margin-top: 10px;
 }
 
 .developer-button {
-    display: flex; // Alinear imagen y texto en línea
-    align-items: center; // Centrar verticalmente
-    background-color: rgba(3, 233, 244, 0.2); // Fondo semi-transparente
-    padding: 10px 20px; // Espaciado interno
-    border-radius: 10px; // Bordes redondeados
-    text-decoration: none; // Sin subrayado
-    transition: background-color 0.3s ease; // Transición suave para el fondo
+    display: flex; 
+    align-items: center; 
+    background-color: map-get($colores-globales, color28); 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    text-decoration: none; 
+    transition: background-color 0.3s ease; 
 }
 
 .developer-button:hover {
-    background-color: rgba(3, 233, 244, 0.4); // Cambiar color de fondo en hover
+    background-color: map-get($colores-globales, color29);
 }
 
 .mav-logo {
-    max-width: 30px; // Ajusta el tamaño de la imagen
-    margin-right: 10px; // Espaciado a la derecha
+    max-width: 30px;
+    margin-right: 10px; 
 }
 
 .mav-text {
-    color: #03e9f4; // Color del texto
-    font-weight: bold; // Negrita
-    transition: color 0.3s ease; // Transición suave
+    color: map-get($colores-globales, color25); 
+    font-weight: bold; 
+    transition: color 0.3s ease; 
 }
 
 .mav-text:hover {
-    color: #a6f6f1; // Color de hover para el texto
+    color: #a6f6f1;
+}
+
+//Newsletter
+.newsletter-container {
+    background: linear-gradient(90deg, map-get($colores-globales, color30), map-get($colores-globales, color31)); 
+    color: map-get($colores-globales, color5); 
+    padding: 20px; 
+    border-radius: 15px; 
+    box-shadow: 0 0 15px map-get($colores-globales, color32);
+    text-align: center; 
+    width: 100%; 
+    max-width: 1200px;
+    height: auto; 
+    position: relative; 
+    margin: 20px auto; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
+    padding-left: 30px; 
+    padding-right: 30px; 
+
+    h2 {
+        margin-bottom: 15px; 
+        font-size: 1.5rem; 
+    }
+
+    .newsletter-form {
+        width: 90%; 
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        gap: 10px; 
+
+        input[type="email"] {
+            padding: 10px; 
+            width: 100%; 
+            border: 1px solid map-get($colores-globales, color32); 
+            border-radius: 10px; 
+            background: map-get($colores-globales, color26); 
+            color: map-get($colores-globales, color5); 
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+
+            input[type="checkbox"] {
+                margin-right: 10px; 
+            }
+        }
+
+        button {
+            padding: 10px 20px; 
+            background: map-get($colores-globales, color6); 
+            color: map-get($colores-globales, color5); 
+            border: none; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            transition: background 0.3s ease;
+        
+            &:hover {
+                background: map-get($colores-globales, color33); 
+            }
+        }
+    }
+
+    // Estilos responsivos
+    @media (max-width: 768px) {
+        padding-left: 15px; 
+        padding-right: 15px; 
+
+        h2 {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding-left: 10px; 
+        padding-right: 10px;
+
+        h2 {
+            font-size: 1rem;
+        }
+
+        input[type="email"], button {
+            width: 90%; 
+        }
+    }
 }
