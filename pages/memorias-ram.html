@@ -6,11 +6,21 @@
     <meta name="description" content="Descubre una amplia gama de memorias RAM de alta calidad en Expansión Game. Encuentra modelos como Corsair, G.Skill, Kingston, y más, diseñados para mejorar el rendimiento de tu PC y garantizar una experiencia fluida en tareas exigentes y juegos intensivos.">
     <meta name="keywords" content="Memorias RAM, Corsair Vengeance LPX, G.Skill Ripjaws V, Kingston HyperX Fury, Crucial Ballistix, Team T-Force Dark Z, ADATA XPG Gammix, RAM para gaming, memoria RAM para PC, mejorar rendimiento PC, componentes de computadora, Expansión Game">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<!-- CDN bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<!-- CDN sweetalert -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- CDN toastify -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<!-- CDN luxon -->
+<script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+<!-- Animate CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css" integrity="sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="shortcut icon" href="../imagenes-expansion-game/expansion-game-favicon.ico"type=image/x-icon>
     <link rel="stylesheet" href="../css/styles.css">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
@@ -61,10 +71,28 @@
                 </li>
                 </ul>
             </div>
+            
+            <!-- Carrito de compras -->
+            <div class="cart-container">
+                <a href="#" class="cart-icon">
+                    <img src="../imagenes-expansion-game/carrito-de-compras.png" alt="Carrito de compras">
+                    <span class="cart-count">0</span>
+                </a>
             </div>
+
+            <div id="cartModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Tu Carrito</h2>
+                    <ul id="cartItems"></ul>
+                    <p>Total: <span id="cartTotal">$0.00</span></p>
+                    <a href="../pages/checkout-page.html" class="btn btn-primary checkout-button" id="checkoutButton">Finalizar compra</a>
+                </div>
+            </div>
+        </div>
         </nav>
-        
     </header>
+
 <main>
 
     <div class="title-section text-center">
@@ -88,7 +116,7 @@
                     </div>
                     <div class="card-footer">
                             <span class="price">$146.989,89</span>
-                            <button class="buy-button">Comprar</button>
+                            <button class="buy-button" data-id="13">Comprar</button>
                     </div>
                 </div>
             </div>
@@ -103,7 +131,7 @@
                     </div>
                     <div class="card-footer">
                         <span class="price">$146.887,99</span>
-                        <button class="buy-button">Comprar</button>
+                        <button class="buy-button" data-id="14">Comprar</button>
                     </div>
                 </div>
             </div>
@@ -118,7 +146,7 @@
                     </div>
                     <div class="card-footer">
                         <span class="price">$169.489,99</span>
-                        <button class="buy-button">Comprar</button>
+                        <button class="buy-button" data-id="15">Comprar</button>
                     </div>
                 </div>
             </div>
@@ -133,7 +161,7 @@
                     </div>
                     <div class="card-footer">
                         <span class="price">$102.888,99</span>
-                        <button class="buy-button">Comprar</button>
+                        <button class="buy-button" data-id="16">Comprar</button>
                     </div>
                 </div>
             </div>
@@ -148,7 +176,7 @@
                     </div>
                     <div class="card-footer">
                         <span class="price">$74.899,99</span>
-                        <button class="buy-button">Comprar</button>
+                        <button class="buy-button" data-id="17">Comprar</button>
                     </div>
                 </div>
             </div>
@@ -163,7 +191,7 @@
                     </div>
                     <div class="card-footer">
                         <span class="price">$46.999,99</span>
-                        <button class="buy-button">Comprar</button>
+                        <button class="buy-button" data-id="18">Comprar</button>
                     </div>
                 </div>
             </div>
@@ -336,41 +364,18 @@
     </div>
 
     <div class="footer-developer">
-        <a href="https://github.com/Mav233" class="developer-button">
+        <a href="https://www.linkedin.com/in/maicovivas/" class="developer-button" target="_blank">
             <img src="../imagenes-expansion-game/ocular-mav.jpg" alt="Desarrollado por MAV" class="mav-logo">
             <span class="mav-text">Desarrollado por MAV</span>
         </a>
     </div>
 </footer>
 
+<script type="module" src="../scripts/librerias.js"></script>
+<script type="module" src="../scripts/carrito.js"></script>
+<script type="module" src="../scripts/checkout.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-<!-- Flecha que lleva al footer o al inicio -->
-<a href="#footer" id="scroll-arrow" class="scroll-arrow">
-    <img src="../imagenes-expansion-game/flecha-doble-sentido.png" alt="Scroll Arrow">
-</a>
-
-<script>
-    const scrollArrow = document.getElementById('scroll-arrow');
-    let isAtFooter = false;
-
-    const footer = document.getElementById('footer');
-    const navbar = document.getElementById('navbar');
-
-    scrollArrow.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    if (!isAtFooter) {
-        footer.scrollIntoView({ behavior: 'smooth' });
-        isAtFooter = true;
-        scrollArrow.style.transform = 'rotate(360deg)';
-    } else {
-        navbar.scrollIntoView({ behavior: 'smooth' });
-        isAtFooter = false;
-        scrollArrow.style.transform = 'rotate(360deg)';
-    }
-    });
-</script>
 
 </body>
 </html>

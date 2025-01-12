@@ -92,98 +92,109 @@
         </nav>
     </header>
 
-<main>
+    <main class="checkout-cyberpunk">
+        <div class="text-center py-5">
+            <h2 class="checkout-title">Formulario de pago</h2>
+            <p class="checkout-lead">Completa la información a continuación para finalizar tu compra.</p>
+        </div>
 
-    <div> 
-        <h1>Expansión Game · Meta Vision</h1>
+        <div class="checkout-wrapper">
+            <!-- Resumen del Pedido -->
+<aside class="order-summary">
+    <h4 class="summary-title">
+        <span>Tu Carrito</span>
+        <span class="badge" id="checkoutItemCount">0</span>
+    </h4>
+    <ul class="list-group" id="checkoutCart"></ul>
+    <div class="total-container">
+        <span>Total</span>
+        <strong id="checkoutTotal">$0.00</strong>
     </div>
-    <section>
-        <h1>CONTACTO</h1>
+</aside>
 
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217954.32132408817!2d-64.35902013069216!3d-31.399347791933582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses!2sar!4v1729645387527!5m2!1ses!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+            <!-- Formulario de Facturación -->
+            <section class="billing-form">
+                <form>
+                    <h4 class="form-title">Dirección de Facturación</h4>
+                    <div class="form-grid">
+                        <div>
+                            <label for="firstName">Nombre</label>
+                            <input type="text" id="firstName" placeholder="Tu nombre" required>
+                        </div>
+                        <div>
+                            <label for="lastName">Apellido</label>
+                            <input type="text" id="lastName" placeholder="Tu apellido" required>
+                        </div>
+                        <div>
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" placeholder="ejemplo@correo.com" required>
+                        </div>
+                        <div>
+                            <label for="address">Dirección</label>
+                            <input type="text" id="address" placeholder="Calle, número, piso/depto" required>
+                        </div>
+                        <div>
+                            <label for="state">Provincia/Estado</label>
+                            <select id="state" required>
+                                <option value="">Selecciona...</option>
+                                <option>Buenos Aires</option>
+                                <option>Córdoba</option>
+                                <option>Santa Fe</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="zip">Código Postal</label>
+                            <input type="text" id="zip" placeholder="CP" required>
+                        </div>
+                    </div>
 
-        <div>
-            <h2>Sucursales</h2>
-            <p>Ubicación: Córdoba capital, Argentina.</p>
-            <p>
-                HORARIOS<br> 
-                Lunes a Viernes de 08:00 a 14:00 y de 16:00 a 20:00<br>
-                Sábado: De 09:00 a 13:00<br> 
-                Domingos y Feriados: Cerrado.</p>
-            <p>Email: venta@expansiongame.com</p>
+                    <h4 class="form-title">Método de Pago</h4>
+                    <div class="payment-methods">
+                        <label>
+                            <input type="radio" name="paymentMethod" id="credit" checked required>
+                            Tarjeta de Crédito
+                        </label>
+                        <label>
+                            <input type="radio" name="paymentMethod" id="debit" required>
+                            Tarjeta de Débito
+                        </label>
+                        <label>
+                            <input type="radio" name="paymentMethod" id="paypal" required>
+                            PayPal
+                        </label>
+                    </div>
+
+                    <div class="form-grid">
+                        <div>
+                            <label for="cc-name">Nombre en la tarjeta</label>
+                            <input type="text" id="cc-name" placeholder="Nombre completo" required>
+                        </div>
+                        <div>
+                            <label for="cc-number">Número de tarjeta</label>
+                            <input type="text" id="cc-number" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        <div>
+                            <label for="cc-expiration">Expiración</label>
+                            <input type="text" id="cc-expiration" placeholder="MM/AA" required>
+                        </div>
+                        <div>
+                            <label for="cc-cvv">CVV</label>
+                            <input type="text" id="cc-cvv" placeholder="123" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Realizar Pedido</button>
+                </form>
+            </section>
         </div>
-        
-        <!-- Formulario de contacto -->
-        <form action="">
-            <div>
-                <label for="name">Nombre y Apellido</label>
-                <input type="text" name="name" required>
-            </div>
-            <div>
-                <label for="provincia">Tu provincia:</label>
-                <select id="provincia" name="provincia" required>
-                    <option value="">--Selecciona una provincia--</option>
-                    <option value="buenos_aires">Buenos Aires</option>
-                    <option value="catamarca">Catamarca</option>
-                    <option value="chaco">Chaco</option>
-                    <option value="chubut">Chubut</option>
-                    <option value="cordoba">Córdoba</option>
-                    <option value="corrientes">Corrientes</option>
-                    <option value="entre_rios">Entre Ríos</option>
-                    <option value="formosa">Formosa</option>
-                    <option value="jujuy">Jujuy</option>
-                    <option value="la_pampa">La Pampa</option>
-                    <option value="la_rioja">La Rioja</option>
-                    <option value="mendoza">Mendoza</option>
-                    <option value="misiones">Misiones</option>
-                    <option value="neuquen">Neuquén</option>
-                    <option value="rio_negro">Río Negro</option>
-                    <option value="salta">Salta</option>
-                    <option value="san_juan">San Juan</option>
-                    <option value="san_luis">San Luis</option>
-                    <option value="santa_cruz">Santa Cruz</option>
-                    <option value="santa_fe">Santa Fe</option>
-                    <option value="santiago_del_estero">Santiago del Estero</option>
-                    <option value="tierra_del_fuego">Tierra del Fuego</option>
-                    <option value="tucuman">Tucumán</option>
-                </select>
-            </div>
-            <div>
-                <label for="email">Tu Email</label>
-                <input type="email" name="email" required>
-            </div>
-            <div>
-                <label for="Telefono">Tu Teléfono</label>
-                <input type="number" name="Telefono">
-            </div>
-            <div>
-                <label for="producto">Producto relacionado a tu consulta</label>
-                <input type="text" name="producto">
-            </div>
-            <div>
-                <label for="consulta">Tu Consulta</label>
-                <br>
-                <textarea name="consulta" required></textarea>
-            </div>
-            <div>
-                <input type="checkbox" name="no_soy_un_robot" required>
-                <label for="no-soy-un-robot">No soy un robot</label>
-            </div>
-            <div>
-                <input type="submit" value="Enviar mensaje">
-            </div>
-        </form>
-    </section>
-    
-    
+    </main>
+    </div>
+
 <!--Botón de whatsapp-->
 <a href="https://web.whatsapp.com/" class="whatsapp-button" target="_blank">
     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve"><path d="M30.5,0C14.233,0,1,13.233,1,29.5c0,5.146,1.346,10.202,3.896,14.65L0.051,58.684c-0.116,0.349-0.032,0.732,0.219,1 C0.462,59.889,0.728,60,1,60c0.085,0,0.17-0.011,0.254-0.033l15.867-4.175C21.243,57.892,25.86,59,30.5,59 C46.767,59,60,45.767,60,29.5S46.767,0,30.5,0z M48.908,42.895l-1.758,1.759C44.93,46.874,42.453,48,39.79,48c0,0,0,0,0,0 c-3.59,0-7.461-2.05-11.503-6.093L18.093,31.714c-3.188-3.188-5.147-6.285-5.823-9.206c-0.82-3.547,0.215-6.796,3.077-9.657 l1.759-1.759c1.131-1.131,2.96-1.409,4.377-0.659c2.662,1.409,5.42,6.025,5.726,6.547c0.552,0.967,0.721,1.967,0.483,2.824 c-0.182,0.655-0.592,1.189-1.188,1.552c-0.808,0.676-1.755,1.518-1.922,1.732c-1.016,1.499-0.9,2.65,0.409,3.96l7.962,7.962 c1.32,1.321,2.451,1.43,3.974,0.398c0.201-0.157,1.042-1.104,1.718-1.912c0.505-0.835,1.332-1.292,2.338-1.292 c0.659,0,1.36,0.2,2.027,0.58c0.532,0.313,5.149,3.071,6.557,5.732C50.337,39.972,50.073,41.73,48.908,42.895z" fill="#000000" style="fill: rgb(3, 233, 244);"></path></svg>
 </a>
 
-</main>
 <footer id="footer">
     <div class="footer-top">
         <ul class="Contacto">
@@ -206,7 +217,7 @@
     <div class="newsletter-container">
         <h2>Suscríbete a nuestro Newsletter Gamer</h2>
         <form class="newsletter-form">
-            <input type="email" placeholder="Ingresa tu correo electrónico:)" required>
+            <input type="email" placeholder="Ingresa tu correo electrónico" required>
             <div class="checkbox-container">
                 <input type="checkbox" id="offers-agreement" required>
                 <label for="offers-agreement">Estoy de acuerdo en recibir información sobre nuevos ingresos y ofertas.</label>
