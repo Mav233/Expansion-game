@@ -421,6 +421,88 @@ select:focus {
     width: 100%;
   }
 }
+.cyberpunk-popup {
+  background: linear-gradient(135deg, #121212, #1e1e1e);
+  border: 1px solid #03e9f4;
+  border-radius: 12px;
+  color: #ffffff;
+  box-shadow: 0 0 20px #03e9f4, 0 0 40px #00ffff;
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+}
+
+.cyberpunk-popup p {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.cyberpunk-button {
+  background: linear-gradient(90deg, #00b3d1, #0072ff);
+  color: #ffffff;
+  padding: 10px 25px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-transform: uppercase;
+  box-shadow: 0 0 8px #00ffff;
+  transition: all 0.3s ease;
+}
+
+.cyberpunk-button:hover {
+  background: linear-gradient(90deg, #0072ff, #00b3d1);
+  box-shadow: 0 0 12px #03e9f5, 0 0 20px #8a2be2;
+  transform: translateY(-2px);
+}
+
+.swal2-timer-progress-bar {
+  background: #03e9f4 !important;
+  height: 4px !important;
+}
+
+.purchase-history {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.purchase-history h4 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.purchase-history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.purchase-history li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.purchase-history li:last-child {
+  border-bottom: none;
+}
+
+.custom-swal-popup {
+  font-family: "Arial", sans-serif;
+  font-size: 1rem;
+  padding: 20px;
+  border-radius: 12px;
+  background: #1a202c;
+  color: #f9f9f9;
+}
+
+.custom-swal-popup h2 {
+  color: #4caf50;
+}
+
 header {
   background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
   padding: 15px 0;
