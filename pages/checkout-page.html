@@ -96,17 +96,17 @@
 
         <div class="checkout-wrapper">
             <!-- Resumen del Pedido -->
-<aside class="order-summary">
-    <h4 class="summary-title">
-        <span>Tu Carrito</span>
-        <span class="badge" id="checkoutItemCount">0</span>
-    </h4>
-    <ul class="list-group" id="checkoutCart"></ul>
-    <div class="total-container">
-        <span>Total</span>
-        <strong id="checkoutTotal">$0.00</strong>
-    </div>
-</aside>
+                <aside class="order-summary">
+                <h4 class="summary-title">
+                        <span>Tu Carrito</span>
+                        <span class="badge" id="checkoutItemCount">0</span>
+                    </h4>
+                    <ul class="list-group" id="checkoutCart"></ul>
+                    <div class="total-container">
+                            <span>Total</span>
+                            <strong id="checkoutTotal">$0.00</strong>
+                    </div>
+                </aside>
 
             <!-- Formulario de Facturación -->
             <section class="billing-form">
@@ -182,8 +182,19 @@
                     <button type="submit" class="btn-submit">Realizar Pedido</button>
                 </form>
 
+                <div class="cotizacion-container">
+                    <div class="cotizacion-dolar">
+                        <h3>Cotización del Dólar Blue</h3>
+                        <p id="dolar-blue">Cargando...</p>
+                    </div>
+                    <div class="cotizacion-dolar">
+                        <h3>Cotización del Dólar Cripto</h3>
+                        <p id="dolar-cripto">Cargando...</p>
+                    </div>
+                </div>
+
                 <section class="order-history">
-                    <h3>Historial de Pedidos</h3>
+                    <h3 class="checkout-title">Historial de Pedidos</h3>
                     <div id="orderHistoryContainer"></div>
                 </section>
 
@@ -238,8 +249,8 @@
 
 <script type="module" src="../scripts/carrito.js"></script>
 <script type="module" src="../scripts/checkout.js"></script>
-<script type="module" src="../scripts/alerts.js"></script>
 <script type="module" src="../scripts/librerias.js"></script>
+<script type="module" src="../scripts/Api.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
